@@ -16,7 +16,9 @@ function wikify($input) {
 	
 	// Font changes.
 	// TODO: Actually implement font changes in a sane way. Right now I'm just stripping them.
-	$input = preg_replace("/<font *>/i", "", $input);
+	// Thank you to Rohan
+	$input = preg_replace("/<(f|\/f)ont.*?>/i", "", $input);
+	//$input = str_replace("</font>", "", $input);
 
 	// And finally links. hooooooooo boyo, this gun b ugly
 	$input = str_ireplace('<a href="', '[', $input);
