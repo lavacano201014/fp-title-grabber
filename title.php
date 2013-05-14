@@ -7,25 +7,23 @@ by Nicholas "Lavacano" O'Connor
 Purpose: Fetch titles on Facepunch (for use with Wikipunch)
 */
 
-require_once("phpquery.php");
+//require_once("phpquery.php");
 require_once("wikify.php");
 
 #$userpage = file_get_contents("http://www.facepunch.com/member.php?u=" . $_GET["userid"], "r");
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://www.facepunch.com/member.php?u=" . $_GET["userid"]);
+curl_setopt($ch, CURLOPT_URL, "http://api.facepun.ch/?&action=getprofile&user_id=" . $_GET["userid"]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-$userpage = curl_exec($ch);
+$apiResult = curl_exec($ch);
 curl_close($ch);
 
 # TODO - see if there's a way to make this not load as much into the server's
 #        memory. I know it's all plaintext, but still.
 
-$phpquerydoc = phpQuery::newDocument($userpage); // i have no idea if it's necessary to keep the return value
-
-$result = pq("span")->find(".usertitle")->html();
+$result = json_decode($apiResult)->usertitle;
 
 if (!$_GET["mediawiki"]) { echo '{"fp_title": "'.str_replace("\"", "\\\"", $result).'"}'; }
 else {
