@@ -14,12 +14,12 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ---
 
-The below license applies to all files except the following:
-   phpquery.php
-
----
-
 This is the Lavacano license.
+
+Throughout this license will be references to "this code" and similar. For all
+intents and purposes, any non-code assets (graphics, binaries, et cetera) will
+be considered as "code" for defining rights and responsibilities within this
+license.
 
 You, fair reader, have the following rights and responsibilities:
  - You have the RIGHT to use this code for any non commercial purpose.
@@ -47,7 +47,7 @@ You, fair reader, have the following rights and responsibilities:
 
 ---
 
-This is revision 1 of the Lavacano license, drafted 2013.05.11 at 19:57 US
+This is revision 2 of the Lavacano license, drafted 2013.05.15 at 14:27 US
 Pacific Time (GMT - 7) by Nicholas "Lavacano" O'Connor. Anything not addressed
 in this license is considered to be accepted unless otherwise forbidden by the
 author.
