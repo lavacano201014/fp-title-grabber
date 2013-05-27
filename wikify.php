@@ -5,6 +5,12 @@
  * Purpose: FUCKING PIECE OF HELL WHY HAS NOBODY WRITTEN A PHP PARSER FOR THIS YET
  */
 
+/*
+ * JUST AS A HEADS UP: THIS FILE IS DEPRECATED UNTIL SUCH TIME AS I CAN STOP
+ * FUCKING RAGING AT DOM PARSING LONG ENOUGH TO FIX IT.
+ * by the way it's a real pain in the ass
+ */
+
 // require_once("phpquery.php"); // y'know i bet this will be necessary, but let's comment it for now
 
 function wikify($input) {
